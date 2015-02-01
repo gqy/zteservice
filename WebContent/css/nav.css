@@ -1,0 +1,5 @@
+#menu { margin:0 auto;padding:0; height:30px; }
+#menu ul { margin:0 auto;padding:0; width:960px; list-style: none; }
+#menu ul li { margin:0 auto;padding:0; float:left;  display:block; width:131px; height:30px; line-height:26px; text-align:center; background:url(../image/nav.jpg) 0 0 no-repeat; }
+#menu ul li a { font-size:12px ; color:white; text-decoration:none; }
+#menu ul li a:hover { color:yellow; }
