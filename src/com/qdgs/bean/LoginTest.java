@@ -34,5 +34,9 @@ public class LoginTest implements Serializable{
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	
+	@Override
+	public String toString() {
+		return "LoginTest [id=" + id + ", name=" + name + ", pass=" + pass
+				+ "]";
+	}
 }
