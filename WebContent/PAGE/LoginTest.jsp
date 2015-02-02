@@ -10,8 +10,8 @@
 <body>
 <s:form action="login">
     
-	<s:textfield name="logintest.name" label="用户名"/>
-	<s:textfield name="logintest.pass" label="密码"/>
+	<s:textfield name="loginTest.name" label="用户名"/>
+	<s:textfield name="loginTest.pass" label="密码"/>
 	
 	<s:submit value="登录" theme="simple"/><s:reset theme="simple" value="重填"/>
 </s:form>

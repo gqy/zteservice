@@ -12,7 +12,7 @@
 	<constant name="struts.devMode" value="true"/>
 	<constant name="struts.objectFactory" value="spring"/>
 	<package name="default" extends="struts-default">
-	    <action name="login" class="com.qdgs.controllergqy.LoginActionTest">
+	    <action name="login" class="com.qdgs.controllergqy.LoginTestAction">
 	        <result name="error">/PAGE/ErrorTest.jsp</result>
 	        <result name="success">/PAGE/SuccessTest.jsp</result>
 	        

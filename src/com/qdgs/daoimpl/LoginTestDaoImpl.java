@@ -42,13 +42,8 @@ public class LoginTestDaoImpl extends QdgsHibernateDaoSupport implements LoginTe
 	public List<LoginTest> findAll() {
 		// TODO Auto-generated method stub
 		return (List<LoginTest>)getHibernateTemplate()
-				.find("from logintest");
+				.find("from LoginTest");
 	}
-	public static void main(String[] args){
-	    LoginTest logintest=new LoginTest(1,"a","a");
-		LoginTestDaoImpl logintestdaoimpl=new LoginTestDaoImpl();
-		logintest=logintestdaoimpl.get(1);
-		System.out.println(logintest.toString());
-	}
+	
 
 }
