@@ -14,9 +14,9 @@
 	<constant name="struts.action.extension" value="html"/>
 	<package name="default" extends="struts-default">
 	    
-	    <action name="regist" class="com.qdgs.controllergqy.LoginTestAction">
-	        <result name="error">/PAGE/ErrorTest.jsp</result>
-	        <result name="success">/PAGE/SuccessTest.jsp</result>
+	    <action name="regist" class="com.qdgs.controllergqy.RegistAction">
+	        <result name="error">/WEB-INF/PAGE/ErrorTest.jsp</result>
+	        <result name="success">/WEB-INF/PAGE/SuccessTest.jsp</result>
 	    </action>
 	    <action name="login" class="com.qdgs.controllergqy.LoginTestAction">
 	        <result name="error">/PAGE/ErrorTest.jsp</result>

@@ -36,6 +36,7 @@
 			<list>
 				<!-- 以下用来列出Hibernate映射文件 -->
 				<value>com/qdgs/bean/LoginTest.hbm.xml</value>
+				<value>com/qdgs/bean/UserInfo.hbm.xml</value>
 			</list>
 		</property>
 		<!-- 定义Hibernate的SessionFactory的属性 -->
@@ -58,12 +59,15 @@
 	<!-- 为之注入DAO组件 -->
 	<bean id="managerTemplate" abstract="true" lazy-init="true"
 		p:loginTestDao-ref="loginTestDao"
+		p:userInfoDao-ref="userInfoDao"
 		/>
 
 	<!-- 定义两个业务逻辑组件，继承业务逻辑组件的模板 -->
 	<bean id="loginTestService"
 		class="com.qdgs.serviceimpl.LoginTestServiceImpl"
 		parent="managerTemplate"/>
-	
+	<bean id="userInfoService"
+	    class="com.qdgs.serviceimpl.UserInfoServiceImpl"
+		parent="managerTemplate"/>
 	
 </beans>

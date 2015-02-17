@@ -7,11 +7,11 @@
 
 <title>ZTE Corporation</title>
 
-<link rel="stylesheet" href="../css/layout.css" type="text/css" />
-<link rel="stylesheet" href="../css/nav.css" type="text/css" />
-<link href="../css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
-<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
-<script src="../js/jquery.slideBox.js" type="text/javascript"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/layout.css" type="text/css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/nav.css" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+<script src="${pageContext.request.contextPath}/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.slideBox.js" type="text/javascript"></script>
 <script>
 jQuery(function($){
 	$('#demo1').slideBox();
@@ -73,11 +73,11 @@ jQuery(function($){
 			<div id="figure">
 				<div id="demo3" class="slideBox">
                   <ul class="items">
-                       <li><a href="#" title="这里是测试标题一"><img src="../image/1.jpg"></a></li>
-                       <li><a href="#" title="这里是测试标题二"><img src="../image/2.jpg"></a></li>
-                       <li><a href="#" title="这里是测试标题三"><img src="../image/3.jpg"></a></li>
-                       <li><a href="#" title="这里是测试标题四"><img src="../image/4.jpg"></a></li>
-                       <li><a href="#" title="这里是测试标题五"><img src="../image/5.jpg"></a></li>
+                       <li><a href="#" title="这里是测试标题一"><img src="${pageContext.request.contextPath}/image/1.jpg"></a></li>
+                       <li><a href="#" title="这里是测试标题二"><img src="${pageContext.request.contextPath}/image/2.jpg"></a></li>
+                       <li><a href="#" title="这里是测试标题三"><img src="${pageContext.request.contextPath}/image/3.jpg"></a></li>
+                       <li><a href="#" title="这里是测试标题四"><img src="${pageContext.request.contextPath}/image/4.jpg"></a></li>
+                       <li><a href="#" title="这里是测试标题五"><img src="${pageContext.request.contextPath}/image/5.jpg"></a></li>
                   </ul>
                </div>
 		   </div>
@@ -142,27 +142,27 @@ jQuery(function($){
 						<div>
 							<table>
 								<tr>
-									<td><img src="../image/x.jpg"></td>
+									<td><img src="${pageContext.request.contextPath}/image/x.jpg"></td>
 									<td class="inf"><a href="#">发布信：ZXMW SR10 S340产品停止…</a></td>
 									<td class="date">[2014-10-17]</td>
 								</tr>
 								<tr>
-									<td><img src="../image/x.jpg"></td>
+									<td><img src="${pageContext.request.contextPath}/image/x.jpg"></td>
 									<td class="inf"><a href="#">发布信：中兴通讯ZXDSL 931CIIA…</a></td>
 									<td class="date">[2013-05-16]</td>
 								</tr>
 								<tr>
-									<td><img src="../image/x.jpg"></td>
+									<td><img src="${pageContext.request.contextPath}/image/x.jpg"></td>
 									<td class="inf"><a href="#">发布信：中兴通讯ZXDSL 931VII产…</a></td>
 									<td class="date">[2013-01-16]</td>
 								</tr>
 								<tr>
-									<td><img src="../image/x.jpg"></td>
+									<td><img src="${pageContext.request.contextPath}/image/x.jpg"></td>
 									<td class="inf"><a href="#">发布信：中兴通讯ZXDSL 931VII停…</a></td>
 									<td class="date">[2012-12-31]</td>
 								</tr>
 								<tr>
-									<td><img src="../image/x.jpg"></td>
+									<td><img src="${pageContext.request.contextPath}/image/x.jpg"></td>
 									<td class="inf"><a href="#">发布信：中兴通讯ZXDSL 931CIIA…</a></td>
 									<td class="date">[2012-12-27]</td>
 								</tr>

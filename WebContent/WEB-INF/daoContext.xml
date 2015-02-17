@@ -12,6 +12,9 @@
 	<bean id="loginTestDao"
 		class="com.qdgs.daoimpl.LoginTestDaoImpl"
 		parent="daoTemplate"/>
+	<bean id="userInfoDao"
+	    class="com.qdgs.daoimpl.UserInfoDaoImpl"
+	    parent="daoTemplate"/>
 
 
 </beans>
