@@ -1,6 +1,7 @@
 package com.qdgs.daoimpl;
 
 import java.util.List;
+
 import com.qdgs.bean.LoginTest;
 import com.qdgs.dao.LoginTestDao;
 import com.qdgs.global.QdgsHibernateDaoSupport;
@@ -43,6 +44,12 @@ public class LoginTestDaoImpl extends QdgsHibernateDaoSupport implements LoginTe
 		// TODO Auto-generated method stub
 		return (List<LoginTest>)getHibernateTemplate()
 				.find("from LoginTest");
+	}
+
+	@Override
+	public List<LoginTest> getByName(String name) {
+		// TODO Auto-generated method stub
+        return (List<LoginTest>)getHibernateTemplate().find("from LoginTest logintest where logintest.name=?",name);
 	}
 	
 

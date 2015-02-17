@@ -13,10 +13,12 @@ public class LoginTestServiceImpl implements LoginTestService{
 		this.loginTestDao = loginTestDao;
 	}
 	@Override
-	public boolean isValidLogin() {
+	public boolean isValidLogin(String name,String pass) {
 		// TODO Auto-generated method stub
-		
-		return false;
+		boolean isCorrectLogin=false;
+		if(loginTestDao.getByName(name).get(0).getPass().equals(pass))
+			isCorrectLogin=true;
+		return isCorrectLogin;
 	}
 	@Override
 	public boolean regist(LoginTest loginTest) {

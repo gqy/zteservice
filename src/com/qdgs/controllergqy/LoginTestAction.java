@@ -1,9 +1,11 @@
 package com.qdgs.controllergqy;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.qdgs.bean.LoginTest;
 import com.qdgs.dao.LoginTestDao;
 import com.qdgs.daoimpl.LoginTestDaoImpl;
+import com.qdgs.global.SessionName;
 import com.qdgs.service.LoginTestService;
 
 public class LoginTestAction extends ActionSupport{
@@ -28,9 +30,12 @@ public class LoginTestAction extends ActionSupport{
 		public String execute()
 			throws Exception
 		{
-		    
-		  if(loginTestService.regist(loginTest)){
+			//´´½¨ActionContextÊµÀý
+		ActionContext ctx = ActionContext.getContext();
+		  if(loginTestService.isValidLogin(loginTest.getName(), loginTest.getPass())==true){
+			  ctx.put(SessionName.USERNAME, loginTest.getName());
 			  return "success";
+			  
 		  }
 		    
 			return "error";

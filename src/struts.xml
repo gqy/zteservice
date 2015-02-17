@@ -11,11 +11,17 @@
 	<constant name="struts.i18n.encoding" value="UTF-8"/>
 	<constant name="struts.devMode" value="true"/>
 	<constant name="struts.objectFactory" value="spring"/>
+	<constant name="struts.action.extension" value="html"/>
 	<package name="default" extends="struts-default">
+	    
+	    <action name="regist" class="com.qdgs.controllergqy.LoginTestAction">
+	        <result name="error">/PAGE/ErrorTest.jsp</result>
+	        <result name="success">/PAGE/SuccessTest.jsp</result>
+	    </action>
 	    <action name="login" class="com.qdgs.controllergqy.LoginTestAction">
 	        <result name="error">/PAGE/ErrorTest.jsp</result>
 	        <result name="success">/PAGE/SuccessTest.jsp</result>
-	        
 	    </action>
 	</package>
+	
 </struts>

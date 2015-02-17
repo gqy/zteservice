@@ -12,11 +12,20 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener
 		</listener-class>
 	</listener>
+	<!-- 过滤jsp 
+	<filter>
+	    <filter-name>jspFilter</filter-name>
+	    <filter-class>com.qdgs.global.JspFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	     <filter-name>jspFilter</filter-name>
+	</filter-mapping>-->
 	<!-- 定义Struts 2的FilterDispathcer的Filter -->
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
 	</filter>
+	
 	<!-- FilterDispatcher用来初始化Struts 2并且处理所有的WEB请求。 -->
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
