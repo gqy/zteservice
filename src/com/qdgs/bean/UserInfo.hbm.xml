@@ -9,7 +9,7 @@
 	    <!-- 使用只读缓存 -->
 		<cache usage="read-only"/>
 		<!-- 映射标识属性 -->
-		<id	name="id" type="integer" column="userId">
+		<id	name="userId" type="integer" column="userId">
 			<!-- 指定使用identity主键生成策略 -->
 			<generator class="assigned"/>
 		</id>

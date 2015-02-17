@@ -57,17 +57,19 @@
 	</bean>
 	<!-- 定义业务逻辑组件模板 -->
 	<!-- 为之注入DAO组件 -->
-	<bean id="managerTemplate" abstract="true" lazy-init="true"
+	<!--  <bean id="managerTemplate" abstract="true" lazy-init="true"
 		p:loginTestDao-ref="loginTestDao"
 		p:userInfoDao-ref="userInfoDao"
-		/>
+		/>-->
 
 	<!-- 定义两个业务逻辑组件，继承业务逻辑组件的模板 -->
 	<bean id="loginTestService"
-		class="com.qdgs.serviceimpl.LoginTestServiceImpl"
-		parent="managerTemplate"/>
+		class="com.qdgs.serviceimpl.LoginTestServiceImpl">
+		<property name="loginTestDao" ref="loginTestDao"></property>
+	</bean>
 	<bean id="userInfoService"
-	    class="com.qdgs.serviceimpl.UserInfoServiceImpl"
-		parent="managerTemplate"/>
+	    class="com.qdgs.serviceimpl.UserInfoServiceImpl">
+		<property name="userInfoDao" ref="userInfoDao"></property>
+	</bean>
 	
 </beans>
