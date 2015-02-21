@@ -4,4 +4,5 @@ import com.qdgs.bean.UserInfo;
 
 public interface UserInfoService {
 boolean regist(UserInfo userInfo);
+boolean isValidLogin(String username,String password);
 }

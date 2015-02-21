@@ -1,5 +1,7 @@
 package com.qdgs.dao;
 
+import java.util.List;
+
 import com.qdgs.bean.UserInfo;
 
 
@@ -9,4 +11,5 @@ public interface UserInfoDao {
     void delete(Integer id);
     void delete(UserInfo userInfo);
     void update(UserInfo userInfo);
+    List<UserInfo> getPassByUserName(String username);
 }

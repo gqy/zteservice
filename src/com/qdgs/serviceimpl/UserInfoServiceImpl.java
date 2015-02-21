@@ -21,5 +21,14 @@ public class UserInfoServiceImpl implements UserInfoService{
 			return true;
 		return false;
 	}
+	@Override
+	public boolean isValidLogin(String username, String password) {
+		// TODO Auto-generated method stub
+		boolean isCorrectLogin=false;
+		if(userInfoDao.getPassByUserName(username).get(0).getUserPwd().equals(password)){
+			isCorrectLogin=true;
+		}
+		return isCorrectLogin;
+	}
 
 }

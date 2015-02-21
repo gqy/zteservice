@@ -1,6 +1,8 @@
 package com.qdgs.daoimpl;
 
 
+import java.util.List;
+
 import com.qdgs.bean.UserInfo;
 import com.qdgs.dao.UserInfoDao;
 import com.qdgs.global.QdgsHibernateDaoSupport;
@@ -28,6 +30,11 @@ public class UserInfoDaoImpl extends QdgsHibernateDaoSupport implements UserInfo
 	public void delete(Integer id) {
 		// TODO Auto-generated method stub
 		getHibernateTemplate().delete(id);
+	}
+	@Override
+	public List<UserInfo> getPassByUserName(String username) {
+		// TODO Auto-generated method stub
+		return (List<UserInfo>)getHibernateTemplate().find("from UserInfo userinfo where userinfo.userName=?",username);
 	}
 
 }
