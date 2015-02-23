@@ -30,7 +30,7 @@ public class RegistAction extends ActionSupport{
 				throws Exception
 			{
 				if(userInfoService.regist(userInfo)==true)
-					return "sucess";
+					return "success";
 				return "error";
 			}
 }

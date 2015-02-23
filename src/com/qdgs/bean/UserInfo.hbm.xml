@@ -15,7 +15,7 @@
 		</id>
 		<!-- 映射普通属性 -->
 		<property name="userName" column="userName"
-			type="string" not-null="true" length="20"/>
+			type="string" not-null="true" unique="true" length="20"/>
 		<property name="userPwd" column="userPwd"
 			type="string" not-null="true" length="40"/>
 		<property name="name" column="name"
@@ -25,9 +25,9 @@
 		<property name="userLinkMan" column="userLinkMan"
 			type="string" not-null="false" length="50"/>
 		<property name="userEmail" column="userEmail"
-			type="string" not-null="true" length="50"/>
+			type="string" not-null="true"  unique="true" length="50"/>
 		<property name="userTel" column="userTel"
-			type="string" not-null="true" length="11"/>
+			type="string" not-null="true" unique="true" length="11"/>
 		<property name="userUnit" column="userUnit"
 			type="string" not-null="true" length="50"/>
 		<property name="userUrl" column="userUrl"

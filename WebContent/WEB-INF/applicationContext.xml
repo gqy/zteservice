@@ -44,7 +44,7 @@
 			<!-- 指定数据库方言、是否自动建表
 				是否生成SQL语句等 	-->
 			<value>
-			hibernate.dialect=org.hibernate.dialect.MySQLInnoDBDialect
+			hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
 			hibernate.hbm2ddl.auto=update
 			hibernate.show_sql=true
 			hibernate.format_sql=true
