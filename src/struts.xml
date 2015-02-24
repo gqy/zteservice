@@ -13,15 +13,17 @@
 	<constant name="struts.objectFactory" value="spring"/>
 	<constant name="struts.action.extension" value="html"/>
 	<package name="default" extends="struts-default">
-	    
+	    <!-- 不使用拦截器的页面跳转 -->
+	    <action name="index" class="com.qdgs.controllergqy.GoToIndexAction">
+	         <result name="success">/WEB-INF/PAGE/Index.jsp</result>
+	    </action>
 	    <action name="regist" class="com.qdgs.controllergqy.RegistAction">
 	        <result name="error">/WEB-INF/PAGE/ErrorTest.jsp</result>
 	        <result name="success">/WEB-INF/PAGE/SuccessTest.jsp</result>
 	    </action>
-	    <action name="login" class="com.qdgs.controllergqy.LoginTestAction">
-	        <result name="error">/PAGE/ErrorTest.jsp</result>
-	        <result name="success">/PAGE/SuccessTest.jsp</result>
-	    </action>
+	</package>
+	<package name="gqy"  extends="struts-default">
+	   <!--配置拦截器的页面跳转  -->
 	</package>
 	
 </struts>
