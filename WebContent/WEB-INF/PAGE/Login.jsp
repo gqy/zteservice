@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<jsp:include page="NaveBar.jsp"/>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -44,7 +45,7 @@
     </div>
   </div>
 </div>
-<script src="${pageContext.request.contextPath}/js/jquery-1.8.3.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-2.1.3.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
 </body>
 

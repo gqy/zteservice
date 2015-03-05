@@ -17,8 +17,19 @@
 	    <action name="index" class="com.qdgs.controllergqy.GoToIndexAction">
 	         <result name="success">/WEB-INF/PAGE/Index.jsp</result>
 	    </action>
-	    <action name="regist" class="com.qdgs.controllergqy.RegistAction">
+	    <action name="login" class="com.qdgs.controllergqy.GoToLoginAction">
+	        <result name="success">/WEB-INF/PAGE/Login.jsp</result>
+	     </action>
+	     <action name="regist" class="com.qdgs.controllergqy.GoToRegistAction">
+	         <result name="success">/WEB-INF/PAGE/Regist.jsp</result>
+	     </action>
+	    
+	    <action name="registaction" class="com.qdgs.controllergqy.RegistAction">
 	        <result name="error">/WEB-INF/PAGE/ErrorTest.jsp</result>
+	        <result name="success">/WEB-INF/PAGE/SuccessTest.jsp</result>
+	    </action>
+	    <action name="loginaction" class="com.qdgs.controllergqy.LoginAction">
+	         <result name="error">/WEB-INF/PAGE/ErrorTest.jsp</result>
 	        <result name="success">/WEB-INF/PAGE/SuccessTest.jsp</result>
 	    </action>
 	</package>
