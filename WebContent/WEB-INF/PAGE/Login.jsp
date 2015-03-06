@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags"%>
 <jsp:include page="NaveBar.jsp"/>
 <!DOCTYPE HTML>
 <html>
@@ -14,20 +15,31 @@
     <![endif]-->
 </head>
 <body>
+<br/><br/><br/>
 <div class="container">
 <div class="row">
   <div class="col-sm-4">
     <h1 class="page-header">已经注册？</h1>
-    <form class="form-signin">
+    <form action="loginaction.html" class="form-signin">
       <h2 class="form-signin-heading">请登录</h2>
       <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+      <input type="text" name="userInfo.userName" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <input type="password" name="userInfo.userPwd" id="inputPassword" class="form-control" placeholder="Password" required>
+     
       <div class="checkbox">
-        <label>
+        
+        <div class="col-sm-8">
+          <label>
           <input type="checkbox" value="remember-me">
-          记住账号</label>
+          记住密码</label>
+          
+          
+          </div>
+          <div class="col-sm-4">
+           <a href="#">忘记密码？</a>
+          
+         </div>
       </div>
       <div class="col-sm-6">
       <button class="btn  btn-primary btn-block " type="submit">登录</button>
@@ -35,6 +47,7 @@
         <div class="col-sm-6">
       <button class="btn  btn-primary btn-block " type="reset">重置</button>
       </div>
+  
     </form>
   </div>
   <div class="col-sm-7 col-sm-offset-1">
@@ -45,8 +58,8 @@
     </div>
   </div>
 </div>
-<script src="${pageContext.request.contextPath}/js/jquery-2.1.3.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
+</div>
+
 </body>
 
 </html>

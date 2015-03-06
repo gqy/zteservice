@@ -11,5 +11,5 @@ public interface UserInfoDao {
     void delete(Integer id);
     void delete(UserInfo userInfo);
     void update(UserInfo userInfo);
-    List<UserInfo> getPassByUserName(String username);
+    List<UserInfo> getPassByUserNameAndUserPwd(UserInfo userInfo);
 }

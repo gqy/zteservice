@@ -26,11 +26,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath}/image/zte.png" width="100px"></a>
+          <a class="navbar-brand" href="index.html"><img src="${pageContext.request.contextPath}/image/zte.png" width="100px"></a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">首页</a></li>
+            <li class="active"><a href="index.html">首页</a></li>
             <li><a href="#">个人空间</a></li>
             <li><a href="navebar.html">服务</a></li>
             <li><a href="#">知识库</a></li>
@@ -40,11 +40,13 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#login" data-toggle="modal">登录</a></li>
-            <li class="divider-vertical"></li>
-            <li><a href="#">注册</a></li>
-            <li class="divider-vertical"></li>
+            <li><a href="login.html">登录</a></li>
+            
+            <li><a href="#">注册 </a></li>
+           
             <li><a href="#">帮助</a></li>
+            <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+            
         </ul>
       </div>
     </nav>

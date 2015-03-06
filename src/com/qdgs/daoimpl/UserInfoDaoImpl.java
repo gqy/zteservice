@@ -32,9 +32,9 @@ public class UserInfoDaoImpl extends QdgsHibernateDaoSupport implements UserInfo
 		getHibernateTemplate().delete(id);
 	}
 	@Override
-	public List<UserInfo> getPassByUserName(String username) {
+	public List<UserInfo> getPassByUserNameAndUserPwd(UserInfo userInfo) {
 		// TODO Auto-generated method stub
-		return (List<UserInfo>)getHibernateTemplate().find("from UserInfo userinfo where userinfo.userName=?",username);
+		return (List<UserInfo>)getHibernateTemplate().find("from UserInfo userinfo where userinfo.userName=? and userinfo.userPwd=?",userInfo.getUserName(),userInfo.getUserPwd());
 	}
 
 }
