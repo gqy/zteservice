@@ -29,7 +29,10 @@
 	        <result name="success">/WEB-INF/PAGE/SuccessTest.jsp</result>
 	    </action>
 	    <action name="loginaction" class="com.qdgs.controllergqy.LoginAction">
-	         <result name="error">/WEB-INF/PAGE/ErrorTest.jsp</result>
+	         <result name="error" type="stream">
+	             <param name="contentType">text/html</param>
+	             <param name="inputName">result</param>
+	         </result>
 	        <result name="success">/WEB-INF/PAGE/SuccessTest.jsp</result>
 	    </action>
 	</package>

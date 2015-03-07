@@ -15,40 +15,38 @@
 
 	
 
-	<div class="row">
-		<div id="carousel1" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                 <li data-target="#carousel1" data-slide-to="0" class="active"></li>
-                 <li data-target="#carousel1" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="${pageContext.request.contextPath}/image/1.jpg" alt="" id="pic1">
-                        <!--
-                        <div class="carousel-caption">
-                            <h4>标题一</h4>
-                            <p>dkeojgook</p>
-                        </div>
-                        -->
-                    </div>
-                    <div class="item">
-                        <img src="${pageContext.request.contextPath}/image/2.jpg" alt="" id="pic2">
-
-                    </div>
+<!-- 轮播 -->
+<div id="carousel1" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+         <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+         <li data-target="#carousel1" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="${pageContext.request.contextPath}/image/1.jpg" alt="" id="pic1">
+                <div class="carousel-caption">
+                    <h4>标题一</h4>
+                    <p>dkeojgook</p>
                 </div>
-                        <a href="#carousel1" data-slide="prev" class="left carousel-control">
-                        	<span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a href="#carousel1" data-slide="next" class="right carousel-control">
-                        	<span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>   
             </div>
-            <script>
-			 $(function(){
-			 $('.carousel').carousel();
-			 });
-			</script>
-	</div>
+            <div class="item">
+                <img src="${pageContext.request.contextPath}/image/2.jpg" alt="" id="pic2">
+
+            </div>
+        </div>
+        <a href="#carousel1" data-slide="prev" class="left carousel-control">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#carousel1" data-slide="next" class="right carousel-control">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>   
+</div>
+    <script>
+     $(function(){
+     $('.carousel').carousel();
+     });
+    </script>
+<!--  轮播结束 -->
 <div class="container">
 </div>
 
