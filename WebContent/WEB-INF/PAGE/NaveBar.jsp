@@ -55,7 +55,7 @@
 <!-- 导航结束 -->
 
 <!-- 弹窗开始 -->
-  <form action="loginaction.html"  id="loginForm" class="form-signin" >
+  <form action="loginaction.html" name="loginForm" id="loginForm" class="form-signin" >
     <div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
