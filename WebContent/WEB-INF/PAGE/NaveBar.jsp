@@ -8,7 +8,7 @@
 <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" />
 <link href="${pageContext.request.contextPath}/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/css/elements.css" rel="stylesheet">
-
+  
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -67,6 +67,7 @@
       <div class="modal-body">
        
       <div id="show" class="alert alert-warning" style="display:none;"></div>
+      <div id="loading" class="alert alert-success" style="display:none;"> </div>
       <label for="inputUsername">用户名</label>
       <input type="text" name="userInfo.userName" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
       <label for="inputPassword" >密码</label>
@@ -101,19 +102,7 @@
      </form>
      
 <script src="${pageContext.request.contextPath}/js/jquery-2.1.3.js"></script>
-<script type="text/javascript">
- $("#loginBtn").click(function(){
-	 $.post("loginaction.html",$("#loginForm").serializeArray(),
-	 //回调
-	 function(data,statusText){
-		if(data=="用户名或者密码错误,请检查"){
-		$("#show").append("登录结果：" + data + "<br />");
-		$("#show").show(1500);}
-		else{window.location.reload();}
-	 },"html");
-	 
- });
-</script>
+<script src="${pageContext.request.contextPath}/js/login.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 
 <script>$('.collapse').collapse("toggle")</script>

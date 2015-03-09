@@ -29,11 +29,11 @@
 	        <result name="success">/WEB-INF/PAGE/SuccessTest.jsp</result>
 	    </action>
 	    <action name="loginaction" class="com.qdgs.controllergqy.LoginAction">
-	         <result name="error" type="stream">
+	         <result name="success" type="stream">
 	             <param name="contentType">text/html</param>
 	             <param name="inputName">result</param>
 	         </result>
-	        <result name="success">/WEB-INF/PAGE/SuccessTest.jsp</result>
+	        
 	    </action>
 	</package>
 	<package name="gqy"  extends="struts-default">

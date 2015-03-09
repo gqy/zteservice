@@ -35,10 +35,11 @@ public void setInputStream(InputStream inputStream) {
 			
 			System.out.println(userInfo);
 			if(userInfoService.isValidLogin(userInfo)==true){
-				return "success";
+				inputStream=new ByteArrayInputStream("登录成功".getBytes("UTF-8"));
+				
 			}else{
 			inputStream=new ByteArrayInputStream("用户名或者密码错误,请检查".getBytes("UTF-8"));
-			return "error";}
-			
+		}
+			return "success";
 		}
 }
