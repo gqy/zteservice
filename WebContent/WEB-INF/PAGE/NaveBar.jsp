@@ -108,7 +108,7 @@
 	 function(data,statusText){
 		if(data=="用户名或者密码错误,请检查"){
 		$("#show").append("登录结果：" + data + "<br />");
-		$("#show").show(2000);}
+		$("#show").show(1500);}
 		else{window.location.reload();}
 	 },"html");
 	 
