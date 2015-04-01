@@ -30,5 +30,10 @@ public class UserInfoServiceImpl implements UserInfoService{
 		}
 		return isCorrectLogin;
 	}
+	@Override
+	public UserInfo getMaxUserId() {
+		// TODO Auto-generated method stub
+		return userInfoDao.getMaxUserId();
+	}
 
 }

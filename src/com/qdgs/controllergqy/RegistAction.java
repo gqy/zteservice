@@ -1,15 +1,22 @@
 package com.qdgs.controllergqy;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.qdgs.bean.UserInfo;
 import com.qdgs.service.UserInfoService;
 
 public class RegistAction extends ActionSupport{
-	//spring自动装填策略,userInfoService对应bean中id
+	//spring鑷姩瑁呭～绛栫暐,userInfoService瀵瑰簲bean涓璱d
     private UserInfoService userInfoService;
-	private UserInfo userInfo;
-	
+	//private UserInfo userInfo;
+	private HttpServletRequest request = ServletActionContext.getRequest();
 	
 	public UserInfoService getUserInfoService() {
 		return userInfoService;
@@ -17,20 +24,63 @@ public class RegistAction extends ActionSupport{
 	public void setUserInfoService(UserInfoService userInfoService) {
 		this.userInfoService = userInfoService;
 	}
-	public UserInfo getUserInfo() {
-		return userInfo;
-	}
-	public void setUserInfo(UserInfo userInfo) {
-		this.userInfo = userInfo;
-	}
+//	public UserInfo getUserInfo() {
+//		return userInfo;
+//	}
+//	public void setUserInfo(UserInfo userInfo) {
+//		this.userInfo = userInfo;
+//	}
 	
 	
-	//处理用户请求
+	//澶勭悊鐢ㄦ埛璇锋眰
 			public String execute()
 				throws Exception
-			{
-				if(userInfoService.regist(userInfo)==true)
+				
+			{   
+				UserInfo  userInfo=new UserInfo();
+			    String id=request.getParameter("userId");
+			    System.out.print(id);
+				String userName=request.getParameter("userName");
+				String userPwd=request.getParameter("userPwd");
+				String name=request.getParameter("name");
+				String userSex=request.getParameter("sex");
+				String userLinkMan=request.getParameter("userLinkMan");
+				String userEmail=request.getParameter("userEmail");
+				String userTel=request.getParameter("userTel");
+				String userUnit=request.getParameter("userUnit");
+				String userUrl=request.getParameter("userUrl");
+				String userCountry=request.getParameter("userCountry");
+				String userProvince=request.getParameter("userProvince");
+				String userCity=request.getParameter("userCity");
+				String userPost=request.getParameter("userPost");
+				String userAddress=request.getParameter("userAddress");
+				String userProduct=request.getParameter("userProduct");
+				String userProductType=request.getParameter("userProductType");
+				String userProductId=request.getParameter("userProductId");
+		
+				userInfo.setId(Integer.parseInt(id));
+				userInfo.setUserName(userName);
+				userInfo.setUserPwd(userPwd);
+				userInfo.setName(name);
+				userInfo.setUserSex(userSex);
+				userInfo.setUserLinkMan(userLinkMan);
+				userInfo.setUserEmail(userEmail);
+				userInfo.setUserTel(userTel);
+				userInfo.setUserUnit(userUnit);
+				userInfo.setUserUrl(userUrl);
+				userInfo.setUserCountry(userCountry);
+				userInfo.setUserProvince(userProvince);
+				userInfo.setUserCity(userCity);
+				userInfo.setUserPost(userPost);
+				userInfo.setUserAddress(userAddress);
+				userInfo.setUserProduct(userProduct);
+				userInfo.setUserProductId(userProductId);
+				userInfo.setUserProductType(userProductType);
+//				
+				if(userInfoService.regist(userInfo)==true){
 					return "success";
+				}
+			    
 				return "error";
 			}
 }

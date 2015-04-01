@@ -21,7 +21,7 @@
 	        <result name="success">/WEB-INF/PAGE/Login.jsp</result>
 	     </action>
 	     <action name="regist" class="com.qdgs.controllergqy.GoToRegistAction">
-	         <result name="success">/WEB-INF/PAGE/Footer.jsp</result>
+	         <result name="success">/WEB-INF/PAGE/Regist.jsp</result>
 	     </action>
 	    
 	    <action name="registaction" class="com.qdgs.controllergqy.RegistAction">

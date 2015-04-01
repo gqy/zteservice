@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class UserInfo implements Serializable{
 private int userId;
+private int id;
 private String userName;
 private String userPwd;
 private String name;
@@ -21,14 +22,19 @@ private String userAddress;
 private String userProduct;
 private String userProductType;
 private String userProductId;
-public UserInfo(int userId, String userName, String userPwd, String name,
-		String userSex, String userLinkMan, String userEmail, String userTel,
-		String userUnit, String userUrl, String userCountry,
+public UserInfo() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public UserInfo(int userId, int id, String userName, String userPwd,
+		String name, String userSex, String userLinkMan, String userEmail,
+		String userTel, String userUnit, String userUrl, String userCountry,
 		String userProvince, String userCity, String userPost,
 		String userAddress, String userProduct, String userProductType,
 		String userProductId) {
 	super();
 	this.userId = userId;
+	this.id = id;
 	this.userName = userName;
 	this.userPwd = userPwd;
 	this.name = name;
@@ -47,16 +53,17 @@ public UserInfo(int userId, String userName, String userPwd, String name,
 	this.userProductType = userProductType;
 	this.userProductId = userProductId;
 }
-public UserInfo() {
-	super();
-	// TODO Auto-generated constructor stub
-}
-
 public int getUserId() {
 	return userId;
 }
 public void setUserId(int userId) {
 	this.userId = userId;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
 }
 public String getUserName() {
 	return userName;
@@ -162,14 +169,16 @@ public void setUserProductId(String userProductId) {
 }
 @Override
 public String toString() {
-	return "UserInfo [userId=" + userId + ", userName=" + userName
-			+ ", userPwd=" + userPwd + ", name=" + name + ", userSex="
-			+ userSex + ", userLinkMan=" + userLinkMan + ", userEmail="
-			+ userEmail + ", userTel=" + userTel + ", userUnit=" + userUnit
-			+ ", userUrl=" + userUrl + ", userCountry=" + userCountry
-			+ ", userProvince=" + userProvince + ", userCity=" + userCity
-			+ ", userPost=" + userPost + ", userAddress=" + userAddress
-			+ ", userProduct=" + userProduct + ", userProductType="
-			+ userProductType + ", userProductId=" + userProductId + "]";
+	return "UserInfo [userId=" + userId + ", id=" + id + ", userName="
+			+ userName + ", userPwd=" + userPwd + ", name=" + name
+			+ ", userSex=" + userSex + ", userLinkMan=" + userLinkMan
+			+ ", userEmail=" + userEmail + ", userTel=" + userTel
+			+ ", userUnit=" + userUnit + ", userUrl=" + userUrl
+			+ ", userCountry=" + userCountry + ", userProvince=" + userProvince
+			+ ", userCity=" + userCity + ", userPost=" + userPost
+			+ ", userAddress=" + userAddress + ", userProduct=" + userProduct
+			+ ", userProductType=" + userProductType + ", userProductId="
+			+ userProductId + "]";
 }
+
 }

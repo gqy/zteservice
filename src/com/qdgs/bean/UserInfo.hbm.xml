@@ -11,9 +11,11 @@
 		<!-- 映射标识属性 -->
 		<id	name="userId" type="integer" column="userId">
 			<!-- 指定使用identity主键生成策略 -->
-			<generator class="assigned"/>
+			<generator class="identity"/>
 		</id>
 		<!-- 映射普通属性 -->
+		<property name="id" column="id"
+			type="integer" not-null="true" unique="true" length="2"/>
 		<property name="userName" column="userName"
 			type="string" not-null="true" unique="true" length="20"/>
 		<property name="userPwd" column="userPwd"

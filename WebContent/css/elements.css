@@ -1,4 +1,14 @@
-
 table tr td{ padding:10px; border:1px;}
+body{ background-color:#CCC; padding:0; margin:0 auto; }
+.panel-title a{ text-decoration:none; }
+#t1{ font-size:12px; color:grey; }
 
-.footer{ background-color:#333; height:400px;}
+.navbar{ padding:0;  margin:0; }
+.carousel{ padding:0; margin:0; }
+
+.footer{ background-color:#333; padding:0; margin:0; color:grey }
+.footer a{ text-decoration:none; color:grey; }
+.footer  #footer-down{ background-color:#111; opacity:0.5; margin:0; padding:0}
+
+#species{ font-weight:10px }
+

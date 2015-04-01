@@ -29,6 +29,11 @@ public class LoginTestServiceImpl implements LoginTestService{
 		}
 		return false;
 	}
+	@Override
+	public int getMaxId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 
 }

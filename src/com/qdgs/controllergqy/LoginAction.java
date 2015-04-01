@@ -5,6 +5,10 @@ import com.qdgs.bean.UserInfo;
 import com.qdgs.service.UserInfoService;
 
 import java.io.*;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
 public class LoginAction extends ActionSupport{
 private UserInfoService userInfoService;
 private UserInfo userInfo;
@@ -32,7 +36,7 @@ public void setInputStream(InputStream inputStream) {
 		public String execute()
 			throws Exception
 		{
-			
+		
 			System.out.println(userInfo);
 			if(userInfoService.isValidLogin(userInfo)==true){
 				inputStream=new ByteArrayInputStream("µÇÂ¼³É¹¦".getBytes("UTF-8"));

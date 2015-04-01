@@ -12,4 +12,5 @@ public interface UserInfoDao {
     void delete(UserInfo userInfo);
     void update(UserInfo userInfo);
     List<UserInfo> getPassByUserNameAndUserPwd(UserInfo userInfo);
+    UserInfo getMaxUserId();
 }

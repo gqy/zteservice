@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>欢迎登陆</title>
+<title>欢迎访问ZTE技术支持</title>
 <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" />
 <link href="${pageContext.request.contextPath}/css/bootstrap-responsive.min.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/css/elements.css" rel="stylesheet">
@@ -100,10 +100,11 @@
   </div>
 </div>
      </form>
-     
+    
 <script src="${pageContext.request.contextPath}/js/jquery-2.1.3.js"></script>
 <script src="${pageContext.request.contextPath}/js/login.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrapValidator.js"></script>
 
 <script>$('.collapse').collapse("toggle")</script>
 
