@@ -39,11 +39,12 @@ public class RegistAction extends ActionSupport{
 			{   
 				UserInfo  userInfo=new UserInfo();
 			    String id=request.getParameter("userId");
-			    System.out.print(id);
+	
 				String userName=request.getParameter("userName");
 				String userPwd=request.getParameter("userPwd");
 				String name=request.getParameter("name");
 				String userSex=request.getParameter("sex");
+				System.out.print("sex"+userSex);
 				String userLinkMan=request.getParameter("userLinkMan");
 				String userEmail=request.getParameter("userEmail");
 				String userTel=request.getParameter("userTel");
