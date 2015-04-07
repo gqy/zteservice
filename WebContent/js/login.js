@@ -1,5 +1,38 @@
+//初始化页面时验证是否记住了密码
+$(document).ready(function() {
+    if ($.cookie("rmbUser") == "true") {
+        $("#re").attr("checked", true);
+        $("#inputUsername").val($.cookie("userName"));
+        $("#inputPassword").val($.cookie("passWord"));
+    }
+});
+
+
+
 $("#loginBtn").click(function(){
-		
+//	    if(document.getElementById("re").checked){
+//	    
+//	    	  $.cookie("username",$("inputUsername").val(),{expires:7});
+//	    }
+//	    else{
+//	    	$.cookie("username",'',{expires:-1});//删除cookie
+//	    }
+	 if (document.getElementById("re").checked) {
+		    
+	        var userName = $("#inputUsername").val();
+	        var passWord = $("#inputPassword").val();
+	       
+	        $.cookie("rmbUser", "true", { expires: 30 }); // 存储一个带7天期限的 cookie
+	        $.cookie("userName", userName, { expires: 30 }); // 存储一个带7天期限的 cookie
+	        $.cookie("passWord", passWord, { expires: 30}); // 存储一个带7天期限的 cookie
+	      
+	    }
+	    else {
+	        $.cookie("rmbUser", "false", { expires: -1 });        // 删除 cookie
+	        $.cookie("userName", '', { expires: -1 });
+	        $.cookie("passWord", '', { expires: -1 });
+	    }
+	  
 		$("#loading").empty();
 		$("#show").empty();
 		$("#loading").hide();

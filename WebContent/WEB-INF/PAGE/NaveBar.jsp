@@ -42,7 +42,10 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#login" data-toggle="modal">登录</a></li>
+            <li>
+               <a href="#login" data-toggle="modal">登录</a>
+                
+            </li>
 
             <li><a href="sub.html">注册</a></li>
 
@@ -81,7 +84,7 @@
          <div class="col-sm-3">
               <div class="checkbox">
                   <label>   
-                  <input type="checkbox" value="remember-me">
+                  <input type="checkbox" value="remember-me" name="re" id="re">
                   记住密码</label>
               </div>
          </div>
@@ -105,7 +108,7 @@
 <script src="${pageContext.request.contextPath}/js/login.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrapValidator.js"></script>
-
+<script src="${pageContext.request.contextPath}/js/jquery.cookie.js">
 <script>$('.collapse').collapse("toggle")</script>
 
 </body>
