@@ -1,5 +1,6 @@
 package com.qdgs.controllergqy;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.qdgs.bean.UserInfo;
 import com.qdgs.service.UserInfoService;
@@ -53,15 +54,17 @@ public void setInputStream(InputStream inputStream) {
 		public String execute()
 			throws Exception
 		{
+			//创建ActionContext实例
+			ActionContext ctx = ActionContext.getContext();
 			
 			System.out.println(userInfo);
 			if(userInfoService.isValidLogin(userInfo)==true){
 				
 				String username=URLEncoder.encode(userInfo.getUserName(),"UTF-8");
-			
-				Cookie userName=new  Cookie("userName",username);
-				userName.setMaxAge(7*60*60*24);
-				response.addCookie(userName);
+			    ctx.getSession().put("userName", username);
+//				Cookie userName=new  Cookie("userName",username);
+//				userName.setMaxAge(7*60*60*24);
+//				response.addCookie(userName);
 				
 				
 				inputStream=new ByteArrayInputStream("登录成功".getBytes("UTF-8"));

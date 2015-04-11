@@ -15,7 +15,7 @@
 		</id>
 		<!-- 映射普通属性 -->
 		<property name="id" column="id"
-			type="integer" not-null="true" unique="true" length="2"/>
+			type="integer" not-null="true" unique="false" length="2"/>
 		<property name="userName" column="userName"
 			type="string" not-null="true" unique="true" length="20"/>
 		<property name="userPwd" column="userPwd"
