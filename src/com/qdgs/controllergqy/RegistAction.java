@@ -1,5 +1,6 @@
 package com.qdgs.controllergqy;
 
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -39,12 +40,10 @@ public class RegistAction extends ActionSupport{
 			{   
 				UserInfo  userInfo=new UserInfo();
 			    String id=request.getParameter("userId");
-	
 				String userName=request.getParameter("userName");
 				String userPwd=request.getParameter("userPwd");
 				String name=request.getParameter("name");
 				String userSex=request.getParameter("sex");
-				System.out.print("sex"+userSex);
 				String userLinkMan=request.getParameter("userLinkMan");
 				String userEmail=request.getParameter("userEmail");
 				String userTel=request.getParameter("userTel");
@@ -58,7 +57,8 @@ public class RegistAction extends ActionSupport{
 				String userProduct=request.getParameter("userProduct");
 				String userProductType=request.getParameter("userProductType");
 				String userProductId=request.getParameter("userProductId");
-		
+		        String head="1.gif";
+		        String time=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new Date());
 				userInfo.setId(Integer.parseInt(id));
 				userInfo.setUserName(userName);
 				userInfo.setUserPwd(userPwd);
@@ -77,6 +77,8 @@ public class RegistAction extends ActionSupport{
 				userInfo.setUserProduct(userProduct);
 				userInfo.setUserProductId(userProductId);
 				userInfo.setUserProductType(userProductType);
+				userInfo.setHead(head);
+				userInfo.setRegTime(time);
 //				
 				if(userInfoService.regist(userInfo)==true){
 					return "success";

@@ -40,9 +40,56 @@
             <interceptor-ref name="defaultStack"/>
             <interceptor-ref name="authority"/>
 	   </action>
-	   
+	   <action name="luntanindex" class="com.qdgs.controllergqy.GoToLindexAction">
+	       <result name="success">/WEB-INF/PAGE/LUNTAN/index.jsp</result>
+	        <!-- 使用拦截器 -->
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="authority"/>
+	      </action>
+	      
+	      <action name="luntandetail" class="com.qdgs.controllergqy.GoToLdetailAction">
+	       <result name="success">/WEB-INF/PAGE/LUNTAN/detail.jsp</result>
+	        <!-- 使用拦截器 -->
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="authority"/>
+	      </action>
+	      
+	      <action name="luntanlist" class="com.qdgs.controllergqy.GoToLlistAction">
+	       <result name="success">/WEB-INF/PAGE/LUNTAN/list.jsp</result>
+	        <!-- 使用拦截器 -->
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="authority"/>
+	      </action>
+	      
+	      <action name="luntannewfile" class="com.qdgs.controllergqy.GoToLnewfileAction">
+	       <result name="success">/WEB-INF/PAGE/LUNTAN/NewFile.jsp</result>
+	        <!-- 使用拦截器 -->
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="authority"/>
+	      </action>
+	      
+	       <action name="luntanpost" class="com.qdgs.controllergqy.GoToLpostAction">
+	       <result name="success">/WEB-INF/PAGE/LUNTAN/post.jsp</result>
+	        <!-- 使用拦截器 -->
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="authority"/>
+	      </action>
+	      
+	       <action name="luntanreply" class="com.qdgs.controllergqy.GoToLreplyAction">
+	       <result name="success">/WEB-INF/PAGE/LUNTAN/reply.jsp</result>
+	        <!-- 使用拦截器 -->
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="authority"/>
+	      </action>
+	      
+	       <action name="luntanupdate" class="com.qdgs.controllergqy.GoToLupdateAction">
+	       <result name="success">/WEB-INF/PAGE/LUNTAN/update.jsp</result>
+	        <!-- 使用拦截器 -->
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="authority"/>
+	      </action>
 	    
-	    <!-- 使用拦截器的页面跳转 -->
+	    <!-- 不使用拦截器的页面跳转 -->
 	    <action name="index" class="com.qdgs.controllergqy.GoToIndexAction">
 	         <result name="success">/WEB-INF/PAGE/Index.jsp</result>
 	    </action>

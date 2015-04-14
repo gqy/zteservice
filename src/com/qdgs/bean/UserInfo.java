@@ -1,9 +1,11 @@
 package com.qdgs.bean;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 public class UserInfo implements Serializable{
-private int userId;
+private int userId=1;
 private int id;
 private String userName;
 private String userPwd;
@@ -22,6 +24,10 @@ private String userAddress;
 private String userProduct;
 private String userProductType;
 private String userProductId;
+private String head;//Í·Ïñ
+private String regTime;//×¢²áÊ±¼ä
+private Set<Topic> topic=new HashSet<Topic>();
+private Set<Reply> reply=new HashSet<Reply>();
 public UserInfo() {
 	super();
 	// TODO Auto-generated constructor stub
@@ -31,7 +37,8 @@ public UserInfo(int userId, int id, String userName, String userPwd,
 		String userTel, String userUnit, String userUrl, String userCountry,
 		String userProvince, String userCity, String userPost,
 		String userAddress, String userProduct, String userProductType,
-		String userProductId) {
+		String userProductId, String head, String regTime, Set<Topic> topic,
+		Set<Reply> reply) {
 	super();
 	this.userId = userId;
 	this.id = id;
@@ -52,6 +59,10 @@ public UserInfo(int userId, int id, String userName, String userPwd,
 	this.userProduct = userProduct;
 	this.userProductType = userProductType;
 	this.userProductId = userProductId;
+	this.head = head;
+	this.regTime = regTime;
+	this.topic = topic;
+	this.reply = reply;
 }
 public int getUserId() {
 	return userId;
@@ -167,18 +178,31 @@ public String getUserProductId() {
 public void setUserProductId(String userProductId) {
 	this.userProductId = userProductId;
 }
-@Override
-public String toString() {
-	return "UserInfo [userId=" + userId + ", id=" + id + ", userName="
-			+ userName + ", userPwd=" + userPwd + ", name=" + name
-			+ ", userSex=" + userSex + ", userLinkMan=" + userLinkMan
-			+ ", userEmail=" + userEmail + ", userTel=" + userTel
-			+ ", userUnit=" + userUnit + ", userUrl=" + userUrl
-			+ ", userCountry=" + userCountry + ", userProvince=" + userProvince
-			+ ", userCity=" + userCity + ", userPost=" + userPost
-			+ ", userAddress=" + userAddress + ", userProduct=" + userProduct
-			+ ", userProductType=" + userProductType + ", userProductId="
-			+ userProductId + "]";
+public String getHead() {
+	return head;
 }
+public void setHead(String head) {
+	this.head = head;
+}
+public String getRegTime() {
+	return regTime;
+}
+public void setRegTime(String regTime) {
+	this.regTime = regTime;
+}
+public Set<Topic> getTopic() {
+	return topic;
+}
+public void setTopic(Set<Topic> topic) {
+	this.topic = topic;
+}
+public Set<Reply> getReply() {
+	return reply;
+}
+public void setReply(Set<Reply> reply) {
+	this.reply = reply;
+}
+
+
 
 }

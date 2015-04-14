@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.qdgs.bean">
+	<class	name="Board"	table="board">
+	    <!-- 使用只读缓存 -->
+		<cache usage="read-only"/>
+		<!-- 映射标识属性 -->
+		<id	name="boardId" type="integer" column="boardId">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity"/>
+		</id>
+		<!-- 映射普通属性 -->
+		
+		<property name="boardTitle" column="boardTitle"
+			type="string" not-null="true" length="255"/>
+		
+		<property name="parentId" column="parentId"
+		    type="int" not-null="true" length="11"/>
+		
+		<set name="topic" inverse="true" cascade="all" lazy="false">
+		     <!-- colum用于指定外键列名 -->
+		     <key column="boardId" not-null="true"/>
+		     <!-- 映射关联类 -->
+		     <one-to-many class="Topic"/>
+		 </set>
+		
+	 </class>
+</hibernate-mapping>

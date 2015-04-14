@@ -47,5 +47,16 @@ public class UserInfoDaoImpl extends QdgsHibernateDaoSupport implements UserInfo
 	   }
 	   return null;
 	}
+	@Override
+	public UserInfo getUserByUserName(String name) {
+		// TODO Auto-generated method stub
+		List<UserInfo> list=(List<UserInfo>)getHibernateTemplate().find("from UserInfo userinfo where userinfo.userName=? ",name);
+		//System.out.println("listÊÇ"+list);
+		if(list!=null && list.size()>=1){
+			return list.get(0);
+		}
+		return null;
+
+	}
 
 }

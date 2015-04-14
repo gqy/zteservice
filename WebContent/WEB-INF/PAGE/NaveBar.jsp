@@ -37,7 +37,7 @@
             <li><a href="#">服务</a></li>
             <li><a href="#">知识库</a></li>
             <li><a href="#">文档</a></li>
-            <li><a href="#">技术社区</a></li>
+            <li><a href="luntanindex.html">技术社区</a></li>
             <li><a href="#">公告社区</a></li>
         </ul>
 
@@ -47,7 +47,7 @@
                 
             </li>
 
-            <li><a href="sub.html">注册</a></li>
+            <li><a href="regist.html">注册</a></li>
 
             <li><a href="#">帮助</a></li>
              <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>

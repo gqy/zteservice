@@ -50,7 +50,21 @@
 			type="string" not-null="false" length="50"/>
 		<property name="userProductId" column="userProductId"
 			type="string" not-null="false" length="50"/>
-		
-		
+		<property name="head" column="head"
+		    type="string" not-null="true" length="50"/>
+		<property name="regTime" column="regTime" 
+		    type="string" not-null="true" length="255"/>
+		<set name="topic" inverse="true" cascade="all" lazy="false">
+		     <!-- colum用于指定外键列名 -->
+		     <key column="userId" not-null="true"/>
+		     <!-- 映射关联类 -->
+		     <one-to-many class="Topic"/>
+		 </set>
+		 <set name="reply" inverse="true" cascade="all" lazy="false">
+		     <!-- colum用于指定外键列名 -->
+		     <key column="userId" not-null="true"/>
+		     <!-- 映射关联类 -->
+		     <one-to-many class="Reply"/>
+		 </set>
 	 </class>
 </hibernate-mapping>

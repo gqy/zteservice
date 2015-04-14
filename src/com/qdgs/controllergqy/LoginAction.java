@@ -3,6 +3,8 @@ package com.qdgs.controllergqy;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.qdgs.bean.UserInfo;
+import com.qdgs.dao.UserInfoDao;
+import com.qdgs.daoimpl.UserInfoDaoImpl;
 import com.qdgs.service.UserInfoService;
 
 import java.io.*;
@@ -57,11 +59,15 @@ public void setInputStream(InputStream inputStream) {
 			//´´½¨ActionContextÊµÀý
 			ActionContext ctx = ActionContext.getContext();
 			
-			System.out.println(userInfo);
+			//System.out.println(userInfo);
 			if(userInfoService.isValidLogin(userInfo)==true){
 				
 				String username=URLEncoder.encode(userInfo.getUserName(),"UTF-8");
-			    ctx.getSession().put("userName", username);
+				UserInfo uf=new UserInfo();
+				
+			    uf=userInfoService.getUserByName(userInfo);
+			    ctx.getSession().put("users", uf);
+			
 //				Cookie userName=new  Cookie("userName",username);
 //				userName.setMaxAge(7*60*60*24);
 //				response.addCookie(userName);

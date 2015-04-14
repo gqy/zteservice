@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.qdgs.bean">
+	<class	name="Reply"	table="reply">
+	    <!-- 使用只读缓存 -->
+		<cache usage="read-only"/>
+		<!-- 映射标识属性 -->
+		<id	name="replyId" type="integer" column="replyId">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity"/>
+		</id>
+		<!-- 映射普通属性 -->
+		
+		<property name="title" column="title"
+			type="string" not-null="true"  length="255"/>
+		<property name="content" column="content"
+			type="string" not-null="true" length="255"/>
+		<property name="publishTime" column="publishTime"
+			type="string" not-null="true" length="255"/>
+		<property name="modifyTime" column="modifyTime"
+			type="string" not-null="true" length="255"/>
+		<many-to-one name="userInfo" class="UserInfo" column="userId" not-null="true" lazy="false"/>
+		<many-to-one name="topic" class="Topic" column="topicId" not-null="true" lazy="false"/>
+		
+		
+		
+	 </class>
+</hibernate-mapping>

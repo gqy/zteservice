@@ -18,7 +18,7 @@
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close"
 		p:driverClass="com.mysql.jdbc.Driver"
-		p:jdbcUrl="jdbc:mysql://localhost/zteserviceprovider"
+		p:jdbcUrl="jdbc:mysql://localhost/test2"
 		p:user="root"
 		p:password="111111"
 		p:maxPoolSize="40"
@@ -37,6 +37,9 @@
 				<!-- 以下用来列出Hibernate映射文件 -->
 				<value>com/qdgs/bean/LoginTest.hbm.xml</value>
 				<value>com/qdgs/bean/UserInfo.hbm.xml</value>
+				<value>com/qdgs/bean/Board.hbm.xml</value>
+				<value>com/qdgs/bean/Reply.hbm.xml</value>
+				<value>com/qdgs/bean/Topic.hbm.xml</value>
 			</list>
 		</property>
 		<!-- 定义Hibernate的SessionFactory的属性 -->
@@ -55,6 +58,7 @@
 			</value>
 		</property>
 	</bean>
+	
 	<!-- 定义业务逻辑组件模板 -->
 	<!-- 为之注入DAO组件 -->
 	<!--  <bean id="managerTemplate" abstract="true" lazy-init="true"

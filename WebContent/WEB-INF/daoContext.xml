@@ -15,6 +15,7 @@
 	<bean id="userInfoDao"
 	    class="com.qdgs.daoimpl.UserInfoDaoImpl"
 	    parent="daoTemplate"/>
+	
 
 
 </beans>

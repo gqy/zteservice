@@ -4,6 +4,7 @@ import java.util.Map;
 
 import com.opensymphony.xwork2.*;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
+import com.qdgs.bean.UserInfo;
 
 public class AuthorizationInterceptor extends AbstractInterceptor{
 
@@ -11,8 +12,9 @@ public class AuthorizationInterceptor extends AbstractInterceptor{
 	public String intercept(ActionInvocation invocation) throws Exception {
 		// TODO Auto-generated method stub
 		Map session = invocation.getInvocationContext().getSession();
-		String userName=(String)session.get("userName");
-		if(userName!=null && !(userName.equals(""))){
+		UserInfo userInfo=(UserInfo)session.get("users");
+		
+		if(userInfo!=null){
 			return invocation.invoke();
 		}
 		else{

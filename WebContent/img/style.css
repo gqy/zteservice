@@ -1,0 +1,44 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{ font-size:13px;}
+a{ text-decoration:none}
+a:hover{ text-decoration:underline; color:#F30}
+img{ border:0;}
+h1{margin:0; padding:0px; font-size:12px;}
+.w{ width:900px;}
+.main{ margin: 0 auto;}
+.header{}
+.menu{ border:1px solid #7897F1; height:25px; margin-top:10px; line-height:25px; }
+.menu span{ margin-left:15px;}
+.body1{border:1px solid #7897F1; margin-top:10px;float:left}
+.body1 .title{ border-bottom:1px solid #7897F1; height:30px; line-height:30px; }
+.body1 .title .one{ margin-left:200px;}
+.body1 .title .two{ margin-left:200px;}
+.body1 .title .three{ margin-left:150px;}
+.board{ height:30px; background:#DFFFBF;float:left;border-top: 1px solid #7897F1;}
+.board span{ line-height:30px; margin-left:10px;float:left; width:400px;}
+.board span h3 { margin:0; padding:0px; font-size:12px; float:left}
+.topic { float:left; border-top: 1px solid #7897F1; width:900px;}
+.topic .title1{ background:url(board.gif) no-repeat center left; height:40px; width:330px; margin-left:30px; float:left; line-height:40px; padding-left:30px;}
+.topic .zt{ width:100px; height:40px; line-height:40px; float:left; text-align:center}
+.topic .time{ width:410px; height:40px; float:left; line-height:40px;text-align:center}
+.topic .item{background:url(topic.gif) no-repeat center left; height:40px; width:630px; margin-left:30px; float:left; line-height:40px; padding-left:30px;}
+.topic .zj{ width:100px; height:40px; line-height:40px; float:left; text-align:center}
+.topic .hf{ width:90px; height:40px; float:left; line-height:40px;text-align:center}
+.bottom{ text-align:center; line-height:25px; margin:0 auto;}
+
+/*list样式*/
+.page{ float:left;margin-top:10px; }
+.page .fy{ width:120px; height:25px; border:1px solid  #7897F1; line-height:25px; text-align:center; float:left}
+.page .post{ float:right}
+
+/*帖子页面*/
+.itemT{ height:25px; background:#4263E6; color:#FFF; line-height:25px; float:left}
+.itemT span{ margin-left:10px; float:left;}
+.itemL{  border:1px solid #7897F1; float:left; width:898px; margin-top:10px;}
+.info{ float:left; width:150px; background:#E6FBCE; line-height:25px; padding:5px; border-right:1px solid #7897F1}
+.content{ float:left; width:720px; padding:8px; }
+.content div{ line-height:25px;}
+
+/*注册页面*/
+.reg{  border:1px solid #7897F1; margin-top:10px;}
